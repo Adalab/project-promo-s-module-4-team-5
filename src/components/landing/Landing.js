@@ -65,7 +65,6 @@ function Landing () {
 
                     <div className="section-btn">
                     <Link className="buttons" to='/create-card'>Nuevo proyecto</Link>
-                    <Link className="buttons" to='/'>Ver proyectos</Link>
                     </div>
                 </article>
 

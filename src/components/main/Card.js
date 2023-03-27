@@ -1,9 +1,11 @@
 import user from "../../images/user.jpeg";
 import "../../styles/layout/preview.scss";
+// import { Link } from "react-router-dom";
 
 function Card ({data}){
     return (
         <section className='autor'>
+            {/* <link to={'/detail/+id'} */}
             <section className='info-project'>
                 <p className='subtitle'>Personal Project Card</p>
                 <hr className='line' />
@@ -26,6 +28,7 @@ function Card ({data}){
                 <p className='job'>{data.job || "Full Stack Developer"}</p>
                 <p className='name'>{data.autor || "Emmelie Björklund"}</p>
             </section>
+            {/* </Link> */}
         </section>
     )
 }

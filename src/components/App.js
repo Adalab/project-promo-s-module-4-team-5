@@ -11,6 +11,7 @@ import FormProject from "./main/FormProject";
 import GetAvatar from "./avatar/GetAvatar";
 import { Routes, Route } from "react-router-dom";
 import Landing from "./landing/Landing";
+import DetailCard from "./main/DetailCard";
 
 function App() {
   const [urlCard, setUrlCard] = useState("");
@@ -97,6 +98,13 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
   };
+
+    //id para cada card
+  // const { pathname } = useLocation();
+  // const routeData = matchPath("detail/:id", pathname);
+  // const cardId = routeData === null ? null : routeData.params.id;
+  // const cardFound = dataFetch.find((obj) => obj.id === cardId);
+
   /* FUNCIONES Y VARIABLES AUXILIARES PARA PINTAR EL HTML */
   /* HTML */
   return (
@@ -105,6 +113,7 @@ function App() {
 
       <main className="main">
         <Routes>
+          {/* <Route path="/detail/:id" element={<DetailCard cardFound={cardFound}/>}></Route> */}
           <Route path="/" element={<Landing/>}></Route>
           <Route path='/create-card' element={
           <>
