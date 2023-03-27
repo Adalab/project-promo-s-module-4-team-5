@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "./static/css/main.0c996c98.css",
+    "main.js": "./static/js/main.de0ae231.js",
+    "static/media/cover.jpeg": "./static/media/cover.e291a311e8829543f486.jpeg",
+    "static/media/celia.jpg": "./static/media/celia.5300ab23dffa1790dec8.jpg",
+    "static/media/foto-mariana.jpg": "./static/media/foto-mariana.34188b86e28671152e2d.jpg",
+    "static/media/Maria-Araujo.jpeg": "./static/media/Maria-Araujo.4dba559a76678ceaf019.jpeg",
+    "static/media/monica.jpeg": "./static/media/monica.5efe5dbb3df9ce56649b.jpeg",
+    "static/media/user.jpeg": "./static/media/user.35f1968a8f670496f370.jpeg",
+    "index.html": "./index.html",
+    "main.0c996c98.css.map": "./static/css/main.0c996c98.css.map",
+    "main.de0ae231.js.map": "./static/js/main.de0ae231.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c996c98.css",
+    "static/js/main.de0ae231.js"
+  ]
+}

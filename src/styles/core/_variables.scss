@@ -1,0 +1,25 @@
+// Esta es la variable que usaremos como tamaño por defecto
+$defaultFontSize: 16;
+
+// Estos son los tamaños para las media-queries
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// fonts
+
+$font-poppins: "Poppins", sans-serif;
+$font-catamaran: "Catamaran", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
+$font-roboto: "Roboto", sans-serif;
+
+// colors
+$black-80: rgba(0, 0, 0, 0.8);
+$white: rgb(255, 255, 255);
+$white-50: rgba(255, 255, 255, 0.5);
+$warm-grey: rgb(144, 144, 144);
+$greyis-brown-88: rgba(62, 62, 62, 0.88);
+$greyis-brown-two: rgb(62, 62, 62);
+$greyis-brown: rgb(80, 80, 80);
+$dark: rgb(48, 44, 66);
+$dark-lilac: rgb(129, 118, 175);
