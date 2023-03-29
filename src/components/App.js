@@ -217,10 +217,10 @@ function App() {
                   </section>
 
                   <section className={"card " + (!urlCard ? "hidden" : "")}>
-                    <span className=''> La tarjeta ha sido creada:</span>
+                    <p className='textCreate'> La tarjeta ha sido creada:</p>
                     <a
                       href={urlCard}
-                      className='card'
+                      className='cardLink'
                       target='_blank'
                       rel='noreferrer'
                     >

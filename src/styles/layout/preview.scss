@@ -8,7 +8,11 @@
     min-height: 765px;
   }
 }
-
+.preview {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
 .main .preview .autor {
   background-color: white;
   color: #3e3e3e;
