@@ -56,7 +56,9 @@ CREATE TABLE `projects` (
   `demo` varchar(1024) NOT NULL,
   `technologies` varchar(1024) NOT NULL,
   `image` longtext NOT NULL,
-  PRIMARY KEY (`idprojects`)
+   fkAutor int not null,
+  foreign (fkAutor) references autors(idautors),
+   PRIMARY KEY (`idprojects`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -79,3 +81,4 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2023-03-28 12:35:17
+
