@@ -1,6 +1,6 @@
 .container {
   background-color: #302c42;
-  padding: 20px 22px 20px 26px;
+
   display: grid;
   grid-template-rows: 80px 1fr;
   min-height: 100vh;
@@ -11,12 +11,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 20px;
+  padding: 10px;
   height: 8vh;
   background-color: $dark;
   @media (min-width: 768px) {
-    padding-bottom: 0px;
-    height: 5vh;
+    padding:25px;
   }
   &__icon {
     color: $white;
@@ -42,7 +41,7 @@
 
 .image {
   object-fit: cover;
-  width: 100%;
+  width: 95%;
   height: 377px;
   @media (min-width: 768px) {
     height: 650px;
