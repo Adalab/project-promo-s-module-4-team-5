@@ -1,11 +1,10 @@
 .main {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;;
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 20px;
-    min-height: 765px;
   }
 }
 .preview {
@@ -13,7 +12,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 }
-.main .preview .autor {
+.preview .autor {
   background-color: white;
   color: #3e3e3e;
   width: 302px;

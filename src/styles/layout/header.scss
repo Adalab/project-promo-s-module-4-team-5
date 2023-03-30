@@ -1,9 +1,9 @@
 .container {
   background-color: #302c42;
   padding: 20px 22px 20px 26px;
-  @media (min-width: 768px) {
-    min-height: 100vh;
-  }
+  display: grid;
+  grid-template-rows: 80px 1fr;
+  min-height: 100vh;
 }
 
 .header {
