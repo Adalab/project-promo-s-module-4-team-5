@@ -59,7 +59,7 @@ function App() {
       setProjectsList(cleanData);
     });
   }, []);
-
+console.log(projectsList);
 
   /* EFECTOS */
   /* FUNCIONES HANDLER */
