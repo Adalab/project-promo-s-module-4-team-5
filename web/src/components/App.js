@@ -57,6 +57,7 @@ function App() {
     api.listProjectApi()
     .then((cleanData) => {
       setProjectsList(cleanData);
+      ls.set("projects", cleanData);
     });
   }, []);
 console.log(projectsList);
@@ -94,7 +95,7 @@ console.log(projectsList);
           setErrorDatabase("");
           data.id = crypto.randomUUID();
           const newList = [...projectsList, data];
-          setProjectsList(newList);
+          setProjectsList([...newList]);
           ls.set("projects", newList);
         } else {
           setUrlCard("");

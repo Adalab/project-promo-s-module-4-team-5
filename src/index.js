@@ -12,7 +12,8 @@ mysql
         user: "freedb_root adalab",
         password: "Bxatj4QVAK%g#CH",
 })
-    .then((connection) => {
+    .then((conn) => {
+        connection = conn;
     connection
         .connect()
         .then(() => {

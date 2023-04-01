@@ -22,4 +22,4 @@ const listProjectApi = () => {
     });
 };
 
-export default {dataApi, listProjectApi}
+export default { dataApi, listProjectApi }
