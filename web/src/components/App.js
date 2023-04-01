@@ -54,13 +54,12 @@ function App() {
   const [errorDatabase, setErrorDatabase] = useState("");
 
   useEffect(() => {
-    api.listProjectApi()
-    .then((cleanData) => {
+    api.listProjectApi().then((cleanData) => {
       setProjectsList(cleanData);
       ls.set("projects", cleanData);
     });
   }, []);
-console.log(projectsList);
+  console.log(projectsList);
 
   /* EFECTOS */
   /* FUNCIONES HANDLER */
@@ -94,6 +93,7 @@ console.log(projectsList);
           setUrlCard(info.cardURL);
           setErrorDatabase("");
           data.id = crypto.randomUUID();
+
           const newList = [...projectsList, data];
           setProjectsList([...newList]);
           ls.set("projects", newList);
@@ -121,7 +121,9 @@ console.log(projectsList);
   const { pathname } = useLocation();
   const routeData = matchPath("detail/:id", pathname);
   const cardId = routeData === null ? null : routeData.params.id;
-  const cardFound = projectsList.find((obj) => obj.id === cardId);
+  const cardFound = projectsList.find(
+    (obj) => parseInt(obj.idprojects) === parseInt(cardId)
+  );
 
   /* FUNCIONES Y VARIABLES AUXILIARES PARA PINTAR EL HTML */
 
@@ -143,31 +145,31 @@ console.log(projectsList);
   // setProjectsList([...projectsList, obj1]);
   /* HTML */
   return (
-    <div className='container'>
+    <div className="container">
       <Header />
 
-      <main className='main'>
+      <main className="main">
         <Routes>
           <Route
-            path='/detail/:id'
+            path="/detail/:id"
             element={<DetailCard cardFound={cardFound} />}
           ></Route>
           <Route
-            path='/'
+            path="/"
             element={<Landing projectsList={projectsList} />}
           ></Route>
           <Route
-            path='/create-card'
+            path="/create-card"
             element={
               <>
                 <Preview data={data} />
-                <form className='form' onSubmit={handleSubmit}>
-                  <h2 className='form__title'>Información</h2>
-                  <section className='ask-info'>
-                    <p className='ask-info__subtitle'>
+                <form className="form" onSubmit={handleSubmit}>
+                  <h2 className="form__title">Información</h2>
+                  <section className="ask-info">
+                    <p className="ask-info__subtitle">
                       Cuéntanos sobre el proyecto
                     </p>
-                    <hr className='line' />
+                    <hr className="line" />
                   </section>
 
                   <FormProject
@@ -179,35 +181,35 @@ console.log(projectsList);
                     errorValidationDemo={errorValidationDemo}
                   />
 
-                  <section className='ask-info'>
-                    <p className='ask-info__subtitle'>
+                  <section className="ask-info">
+                    <p className="ask-info__subtitle">
                       Cuéntanos sobre la autora
                     </p>
-                    <hr className='line' />
+                    <hr className="line" />
                   </section>
 
                   <FormAuthor data={data} setDataInput={setDataInput} />
 
-                  <section className='buttons-img'>
+                  <section className="buttons-img">
                     <GetAvatar
                       avatar={avatar}
                       updateAvatar={updateAvatar}
-                      value='Subir foto autora'
-                      className='buttons-img__btn'
+                      value="Subir foto autora"
+                      className="buttons-img__btn"
                     />
 
                     <GetAvatar
                       avatar={autor}
                       updateAvatar={updateAutor}
-                      value='Subir foto del proyecto'
-                      className='buttons-img__btn'
+                      value="Subir foto del proyecto"
+                      className="buttons-img__btn"
                     />
                   </section>
 
-                  <section className='buttons-img'>
+                  <section className="buttons-img">
                     <button
-                      type='submit'
-                      className='buttons-img__btn'
+                      type="submit"
+                      className="buttons-img__btn"
                       onClick={handleClickCreate}
                     >
                       Crear Tarjeta
@@ -220,18 +222,18 @@ console.log(projectsList);
                       (!errorEmptyFields && !errorDatabase ? "hidden" : "")
                     }
                   >
-                    <span className=''>
+                    <span className="">
                       {errorEmptyFields || errorDatabase}
                     </span>
                   </section>
 
                   <section className={"card " + (!urlCard ? "hidden" : "")}>
-                    <p className='textCreate'> La tarjeta ha sido creada:</p>
+                    <p className="textCreate"> La tarjeta ha sido creada:</p>
                     <a
                       href={urlCard}
-                      className='cardLink'
-                      target='_blank'
-                      rel='noreferrer'
+                      className="cardLink"
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       {urlCard}
                     </a>

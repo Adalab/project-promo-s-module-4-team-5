@@ -7,14 +7,14 @@ import cover from "../../images/cover.jpeg";
 function DetailCard({ cardFound }) {
   return (
     <>
-      <section className='preview detail'>
+      <section className="preview detail">
         <img
-          className='detail-image'
+          className="detail-image"
           src={cardFound.photo ? cardFound.photo : cover}
           alt={cardFound.name}
         />
         <Card data={cardFound}></Card>
-        <Link className='buttons' to='/'>
+        <Link className="buttons" to="/">
           Ver proyectos
         </Link>
       </section>
