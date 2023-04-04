@@ -10,7 +10,7 @@ function DetailCard({ cardFound }) {
       <section className="preview detail">
         <img
           className="detail-image"
-          src={cardFound.photo ? cardFound.photo : cover}
+          src={cardFound.image ? cardFound.image : cover}
           alt={cardFound.name}
         />
         <Card data={cardFound}></Card>

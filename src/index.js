@@ -65,14 +65,14 @@ server.post("/api/projects/add", (req, res) => {
     const data = req.body;
     console.log(data);
 
-    let sqlAutor="INSERT INTO autors (autor,job,image) values (?,?,?)";
-    let valuesAutor = [data.autor, data.job, data.image];
+    let sqlAutor="INSERT INTO autors (autor,job, photo) values (?,?,?)";
+    let valuesAutor = [data.autor, data.job, data.photo];
     
     connection
         .query(sqlAutor, valuesAutor)
         .then(([results]) => {
-            let sqlProjects = "INSERT INTO projects (name,slogan,technologies,demo,repo,`desc`,photo,fkAutor) VALUES(?,?,?,?,?,?,?,?)";
-            let valuesProject = [data.name,data.slogan,data.technologies,data.demo,data.repo,data.desc,data.photo,results.insertId];
+            let sqlProjects = "INSERT INTO projects (name,slogan,technologies,demo,repo,`desc`,image,fkAutor) VALUES(?,?,?,?,?,?,?,?)";
+            let valuesProject = [data.name,data.slogan,data.technologies,data.demo,data.repo,data.desc,data.image,results.insertId];
             connection
                 .query(sqlProjects, valuesProject)
                 .then(([results, fields]) => {

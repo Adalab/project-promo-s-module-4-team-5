@@ -27,8 +27,8 @@ function App() {
     desc: ls.get("url", {}).desc || "",
     autor: ls.get("url", {}).autor || "",
     job: ls.get("url", {}).job || "",
-    image: ls.get("url", {}).photo || "",
-    photo: ls.get("url", {}).image || "",
+    image: ls.get("url", {}).image || "",
+    photo: ls.get("url", {}).photo || "",
   });
 
   const avatar = "";
@@ -44,8 +44,8 @@ function App() {
       desc: data.desc,
       autor: data.autor,
       job: data.job,
-      photo: data.image,
-      image: data.photo,
+      photo: data.photo,
+      image: data.image,
     });
   }, [data]);
   const [errorEmptyFields, setErrorEmptyFields] = useState("");
@@ -194,14 +194,14 @@ function App() {
                     <GetAvatar
                       avatar={avatar}
                       updateAvatar={updateAvatar}
-                      value="Subir foto autora"
+                      value="Subir foto del proyecto"
                       className="buttons-img__btn"
                     />
 
                     <GetAvatar
                       avatar={autor}
                       updateAvatar={updateAutor}
-                      value="Subir foto del proyecto"
+                      value="Subir foto de la autora"
                       className="buttons-img__btn"
                     />
                   </section>
