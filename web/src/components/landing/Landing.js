@@ -10,9 +10,7 @@ function Landing({ projectsList }) {
         <Link
           className="link-landing"
           key={index}
-          to={"detail/" + project.idprojects}
-        >
-          console.log(projectsList);
+          to={"detail/" + project.idprojects}>
           <Card data={project}></Card>
         </Link>
       );

@@ -60,3 +60,30 @@ server.get("/api/projects/all", (req, res) => {
         throw err;
     });
 });
+
+server.post("/api/projects/add", (req, res) => {
+    const data = req.body;
+    console.log(data);
+
+    let sqlAutor="INSERT INTO autors (autor,job,image) values (?,?,?)";
+    let valuesAutor = [data.autor, data.job, data.image];
+    
+    connection
+        .query(sqlAutor, valuesAutor)
+        .then(([results]) => {
+            let sqlProjects = "INSERT INTO projects (name,slogan,technologies,demo,repo,`desc`,photo,fkAutor) VALUES(?,?,?,?,?,?,?,?)";
+            let valuesProject = [data.name,data.slogan,data.technologies,data.demo,data.repo,data.desc,data.photo,results.insertId];
+            connection
+                .query(sqlProjects, valuesProject)
+                .then(([results, fields]) => {
+                    let response ={
+                        success:true,
+                        cardURL:`http://localhost:4000/api/projects/${results.insertId}`
+                    }
+                    res.json(response);
+            })
+        })
+        .catch((err) => {
+            throw err;
+        });
+})
