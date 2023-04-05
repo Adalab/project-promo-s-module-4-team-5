@@ -7,32 +7,33 @@ function Landing({ projectsList }) {
   const renderCard = () => {
     return projectsList.map((project, index) => {
       return (
-        <Link
-          className="link-landing"
+        <a
+          className='link-landing'
           key={index}
-          to={"detail/" + project.idprojects}>
+          href={"/api/projects/detail/" + project.idprojects}
+        >
           <Card data={project}></Card>
-        </Link>
+        </a>
       );
     });
   };
   return (
     <>
-      <section className="landing container-landing">
+      <section className='landing container-landing'>
         <article>
-          <h2 className="title">Proyectos Molones</h2>
-          <h3 className="subtitle">
+          <h2 className='title'>Proyectos Molones</h2>
+          <h3 className='subtitle'>
             Escaparate en línea para recoger ideas a través de la tecnología
           </h3>
 
-          <div className="section-btn">
-            <Link className="buttons" to="/create-card">
+          <div className='section-btn'>
+            <Link className='buttons' to='/create-card'>
               Nuevo proyecto
             </Link>
           </div>
         </article>
 
-        <div className="landing-card">{renderCard()}</div>
+        <div className='landing-card'>{renderCard()}</div>
       </section>
     </>
   );

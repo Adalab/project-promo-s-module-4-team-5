@@ -118,58 +118,43 @@ function App() {
   };
 
   //id para cada card
-  const { pathname } = useLocation();
-  const routeData = matchPath("detail/:id", pathname);
-  const cardId = routeData === null ? null : routeData.params.id;
-  const cardFound = projectsList.find(
-    (obj) => parseInt(obj.idprojects) === parseInt(cardId)
-  );
+  // const { pathname } = useLocation();
+  // const routeData = matchPath("detail/:id", pathname);
+  // const cardId = routeData === null ? null : routeData.params.id;
+  // const cardFound = projectsList.find(
+  //   (obj) => parseInt(obj.idprojects) === parseInt(cardId)
+  // );
 
   /* FUNCIONES Y VARIABLES AUXILIARES PARA PINTAR EL HTML */
-
-  // const obj1 = {
-  //   name: "SinEntrada.es",
-  //   slogan: "Disfruta del partido estés donde estés",
-  //   repo: "https://github.com",
-  //   demo: "https://github.com",
-  //   technologies: "HTML, CSS, JavaScript, React",
-  //   desc: "En SinEntrada.com descubrirás lugares donde disfrutar de los partido de tus equipos favoritos. Informarte y comparte dónde ver el próximo evento junt@/es.",
-  //   autor: "María Araujo",
-  //   job: "Front-end developer",
-  //   photo:
-  //     "https://www.funcion.info/wp-content/uploads/2021/03/funcion-de-las-imagenes.jpg",
-  //   image: Maria,
-  //   id: "46546d5",
-  // };
 
   // setProjectsList([...projectsList, obj1]);
   /* HTML */
   return (
-    <div className="container">
+    <div className='container'>
       <Header />
 
-      <main className="main">
+      <main className='main'>
         <Routes>
-          <Route
+          {/* <Route
             path="/detail/:id"
             element={<DetailCard cardFound={cardFound} />}
-          ></Route>
+          ></Route> */}
           <Route
-            path="/"
+            path='/'
             element={<Landing projectsList={projectsList} />}
           ></Route>
           <Route
-            path="/create-card"
+            path='/create-card'
             element={
               <>
                 <Preview data={data} />
-                <form className="form" onSubmit={handleSubmit}>
-                  <h2 className="form__title">Información</h2>
-                  <section className="ask-info">
-                    <p className="ask-info__subtitle">
+                <form className='form' onSubmit={handleSubmit}>
+                  <h2 className='form__title'>Información</h2>
+                  <section className='ask-info'>
+                    <p className='ask-info__subtitle'>
                       Cuéntanos sobre el proyecto
                     </p>
-                    <hr className="line" />
+                    <hr className='line' />
                   </section>
 
                   <FormProject
@@ -181,35 +166,35 @@ function App() {
                     errorValidationDemo={errorValidationDemo}
                   />
 
-                  <section className="ask-info">
-                    <p className="ask-info__subtitle">
+                  <section className='ask-info'>
+                    <p className='ask-info__subtitle'>
                       Cuéntanos sobre la autora
                     </p>
-                    <hr className="line" />
+                    <hr className='line' />
                   </section>
 
                   <FormAuthor data={data} setDataInput={setDataInput} />
 
-                  <section className="buttons-img">
+                  <section className='buttons-img'>
                     <GetAvatar
                       avatar={avatar}
                       updateAvatar={updateAvatar}
-                      value="Subir foto del proyecto"
-                      className="buttons-img__btn"
+                      value='Subir foto del proyecto'
+                      className='buttons-img__btn'
                     />
 
                     <GetAvatar
                       avatar={autor}
                       updateAvatar={updateAutor}
-                      value="Subir foto de la autora"
-                      className="buttons-img__btn"
+                      value='Subir foto de la autora'
+                      className='buttons-img__btn'
                     />
                   </section>
 
-                  <section className="buttons-img">
+                  <section className='buttons-img'>
                     <button
-                      type="submit"
-                      className="buttons-img__btn"
+                      type='submit'
+                      className='buttons-img__btn'
                       onClick={handleClickCreate}
                     >
                       Crear Tarjeta
@@ -222,18 +207,18 @@ function App() {
                       (!errorEmptyFields && !errorDatabase ? "hidden" : "")
                     }
                   >
-                    <span className="">
+                    <span className=''>
                       {errorEmptyFields || errorDatabase}
                     </span>
                   </section>
 
                   <section className={"card " + (!urlCard ? "hidden" : "")}>
-                    <p className="textCreate"> La tarjeta ha sido creada:</p>
+                    <p className='textCreate'> La tarjeta ha sido creada:</p>
                     <a
                       href={urlCard}
-                      className="cardLink"
-                      target="_blank"
-                      rel="noreferrer"
+                      className='cardLink'
+                      target='_blank'
+                      rel='noreferrer'
                     >
                       {urlCard}
                     </a>
