@@ -1,20 +1,23 @@
 const dataApi = (data) => {
-  return fetch("http://localhost:4000/api/projects/add", {
-    method: "POST",
-    body: JSON.stringify(data),
-    headers: { "Content-type": "application/json" },
-  })
+  return fetch(
+    "https://proyectos-molones-code-queens.onrender.com/api/projects/add",
+    {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-type": "application/json" },
+    }
+  )
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
       return data;
     });
 };
-
-
 
 const listProjectApi = () => {
-  return fetch("http://localhost:4000/api/projects/all")
+  return fetch(
+    "https://proyectos-molones-code-queens.onrender.com/api/projects/all"
+  )
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
@@ -22,4 +25,4 @@ const listProjectApi = () => {
     });
 };
 
-export default { dataApi, listProjectApi }
+export default { dataApi, listProjectApi };
