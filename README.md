@@ -2,11 +2,11 @@
 
 ## :robot: Descripción del proyecto.
 
-Este repositorio contiene el proyecto del grupo 5 correspondiente al módulo 3 de la promoción Salas del BootCamp Web Programming de Adalab.
+Este repositorio contiene el proyecto del grupo 5 correspondiente al módulo 4 de la promoción Salas del BootCamp Web Programming de Adalab.
 
 En este proyecto se pide la realización de una aplicación web que nos permita crear una página para mostrar un proyecto personal o un planteamiento que resulte interesante.
 
-En la página web se podrán introducir datos personales y profesionales, y obtener una vista maquetada con la información.
+En la página web se podrán introducir datos personales y profesionales, obtener una vista maquetada con la información y te permitirá crear una tarjeta de proyecto totalmente personalizada.
 
 ## :dart: Objetivos:
 
@@ -24,9 +24,9 @@ En la página web se podrán introducir datos personales y profesionales, y obte
 
 ## :bookmark_tabs: Especificaciones:
 
-En el desarrollo de esta aplicación web usaremos las siguientes tecnologías:
+En el desarrollo de esta aplicación web, programemos tanto backend como frontend y usaremos las siguientes tecnologías:
 
-- Uso de Sass para los estilos.
+- Uso de SASS / SCSS para los estilos.
 
 - Uso de mediaqueries para que el diseño sea adaptable al dispositivo.
 
@@ -36,7 +36,19 @@ En el desarrollo de esta aplicación web usaremos las siguientes tecnologías:
 
 - Uso de git para el control de versiones del proyecto, con ramas y pull-requests para revisar los cambios de las compañeras.
 
-- Publicación del resultado en Internet usando GitHub Pages.
+- Desarrollo de aplicaciones con NODE JS.
+
+- Usaremos el framework Express JS para escuchar, procesar y responder las peticiones que se hacen desde una web.
+
+- Base de datos SQL, usando la interfaz gráfica MYSQL WORKBENCH.
+
+- Uso de FreeDB como alojamiento de base de datos MySql. 
+
+- Herramienta POSTMAN para permitir hacer cualquier petición a un servidor.
+
+- Servidores estáticos y dinámicos.
+
+- Uso de la  plataforma en la nube RENDER para desplegar nuestra aplicación.
 
 ## :electric_plug: Funcionamiento:
 
@@ -68,3 +80,15 @@ Respecto a la interacción con la web los requerimientos son:
 - Al hacer clic en el botón de "Crear Tarjeta" enviaremos el formulario a un API que devolverá la URL de una web, con la tarjeta de visita con la información rellena.
 
 - Mostraremos esta URL para que el usuario verifique si la tarjeta está bien definida.
+
+## Autoras ✒️
+
+En la realización de este proyecto han participado:
+
+- [Celia Ramírez(https://github.com/celsrami)
+- [Mariana Lobo](https://github.com/MarianaLobo)
+- [María Araujo](https://github.com/maragil)
+- [Mónica Saborido](https://github.com/sabfiamo)
+
+
+
