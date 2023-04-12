@@ -1,4 +1,4 @@
-![Imagen del proyecto](./src/images/logo-adalab.png)
+![Imagen del proyecto](./web/src/images/logo-adalab.png)
 
 ## :robot: Descripción del proyecto.
 
