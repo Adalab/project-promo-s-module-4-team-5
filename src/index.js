@@ -2,6 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2/promise");
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('../swagger.json');
+
 //guardamos la conexion
 let connection;
 //creamos la conexión
@@ -32,6 +35,7 @@ const server = express();
 server.use(cors());
 //para especificar el tamañ de intercambio de archivos
 server.use(express.json({ limit: "10mb" }));
+server.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));//Especificar en el server use
 
 // configurar motor de plantillas
 server.set("view engine", "ejs");
