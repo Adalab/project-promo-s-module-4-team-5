@@ -85,7 +85,7 @@ Respecto a la interacción con la web los requerimientos son:
 
 En la realización de este proyecto han participado:
 
-- [Celia Ramírez(https://github.com/celsrami)
+- [Celia Ramírez](https://github.com/celsrami)
 - [Mariana Lobo](https://github.com/MarianaLobo)
 - [María Araujo](https://github.com/maragil)
 - [Mónica Saborido](https://github.com/sabfiamo)
