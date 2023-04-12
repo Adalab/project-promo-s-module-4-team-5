@@ -91,7 +91,7 @@ server.post("/api/projects/add", (req, res) => {
         let response = {
           success: true,
           // cardURL: `http://localhost:4000/api/projects/${results.insertId}`,
-          cardURL: `https://proyectos-molones-code-queens.onrender.com/api/projects/${results.insertId}`,
+          cardURL: `https://proyectos-molones-code-queens.onrender.com/api/projects/detail/${results.insertId}`,
         };
         res.json(response);
       });
