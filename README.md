@@ -12,15 +12,23 @@ En la página web se podrán introducir datos personales y profesionales, obtene
 
 1. Saber identificar y generar los componentes de una página, separarlos y crear componentes visualmente similares a partir de estos.
 
-2. Aprender a usar React para crear una aplicación web sencilla.
+2. Aprender a usar React para crear una aplicación web.
 
-3. Aprender a buscar información en la documentación de librerías externas.
+3. Consolidar el aprendizaje de las tecnologías Node JS y Express JS para aprender a escuchar peticiones desde los navegadores.
 
-4. Implementar Scrum como marco de referencia para el desarrollo del producto, basándonos siempre en los valores de Agile como puntos clave del trabajo en equipo y la mejora continua.
+4. Consolidar el aprendizaje de MYSQL para trabajar con bases de datos y guardar información de forma persistente.
 
-5. Mejorar la comunicación entre los miembros del equipo.
+5. Consolidar el aprendizaje de API Rest para saber cómo estructurar y organizar las comunicaciones entre un navegador y un servidor de forma óptima.
 
-6. Mejorar las habilidades de comunicación en público al exponer el proyecto en la sesión final.
+6. Ser capaces de poner en producción un proyecto completo: front end + back end.
+
+7. Aprender a buscar información en la documentación de librerías externas.
+
+8. Implementar Scrum como marco de referencia para el desarrollo del producto, basándonos siempre en los valores de Agile como puntos clave del trabajo en equipo y la mejora continua.
+
+9. Mejorar la comunicación entre los miembros del equipo.
+
+10. Mejorar las habilidades de comunicación en público al exponer el proyecto en la sesión final.
 
 ## :bookmark_tabs: Especificaciones:
 
